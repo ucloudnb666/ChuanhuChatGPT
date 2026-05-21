@@ -47,6 +47,15 @@ def get_model(
             logging.info(access_key)
             model = OpenAIVisionClient(
                 model_name, api_key=access_key, user_name=user_name)
+        elif model_type == ModelType.Astraflow:
+            logging.info(f"正在加载 Astraflow 模型: {model_name}")
+            from .OpenAIVision import OpenAIVisionClient
+            if "CN" in model_name:
+                access_key = os.environ.get("ASTRAFLOW_CN_API_KEY", access_key)
+            else:
+                access_key = os.environ.get("ASTRAFLOW_API_KEY", access_key)
+            model = OpenAIVisionClient(
+                model_name, api_key=access_key, user_name=user_name)
         elif model_type == ModelType.OpenAIInstruct:
             logging.info(f"正在加载OpenAI Instruct模型: {model_name}")
             from .OpenAIInstruct import OpenAI_Instruct_Client

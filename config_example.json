@@ -22,6 +22,8 @@
     "ollama_host": "", // 你的 Ollama Host，用于 Ollama 对话模型
     "huggingface_auth_token": "", // 你的 Hugging Face API Token，用于访问有限制的模型
     "groq_api_key": "", // 你的 Groq API Key，用于 Groq 对话模型(https://console.groq.com/)
+    "astraflow_api_key": "", // 你的 Astraflow API Key，用于 Astraflow 对话模型（全球端点: https://astraflow.ucloud-global.com）
+    "astraflow_cn_api_key": "", // 你的 Astraflow API Key，用于 Astraflow 对话模型（中国端点: https://astraflow.ucloud.cn）
 
     //== Azure ==
     "openai_api_type": "openai", // 可选项：azure, openai

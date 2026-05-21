@@ -161,6 +161,7 @@ class ModelType(Enum):
     Ollama = 21
     Groq = 22
     DeepSeek = 23
+    Astraflow = 24
 
     @classmethod
     def get_type(cls, model_name: str):
@@ -227,6 +228,8 @@ class ModelType(Enum):
             model_type = ModelType.GoogleGemma
         elif "deepseek" in model_name_lower:
             model_type = ModelType.DeepSeek
+        elif "astraflow" in model_name_lower:
+            model_type = ModelType.Astraflow
         else:
             model_type = ModelType.LLaMA
         return model_type

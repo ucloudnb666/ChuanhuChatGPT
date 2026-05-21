@@ -79,6 +79,8 @@ ONLINE_MODELS = [
     "Groq LLaMA2 70B",
     "Groq Mixtral 8x7B",
     "Groq Gemma 7B",
+    "Astraflow",
+    "Astraflow CN",
     "GooglePaLM",
     "Gemma 2B",
     "Gemma 7B",
@@ -558,6 +560,22 @@ MODEL_METADATA = {
         "token_limit": 64000,
         "multimodal": False,
         "model_type": "DeepSeek"
+    },
+    "Astraflow": {
+        "model_name": "astraflow",
+        "api_host": "https://api-us-ca.umodelverse.ai/v1",
+        "description": "Astraflow by UCloud — OpenAI-compatible platform supporting 200+ models (global endpoint)",
+        "token_limit": 128000,
+        "multimodal": False,
+        "model_type": "Astraflow"
+    },
+    "Astraflow CN": {
+        "model_name": "astraflow-cn",
+        "api_host": "https://api.modelverse.cn/v1",
+        "description": "Astraflow by UCloud — OpenAI-compatible platform supporting 200+ models (China endpoint)",
+        "token_limit": 128000,
+        "multimodal": False,
+        "model_type": "Astraflow"
     }
 }
 
